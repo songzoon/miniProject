@@ -9,19 +9,21 @@
   <ion-navbar>
     <ion-title>Message</ion-title>
   </ion-navbar>
-
+ 
 </ion-header>
 
 
 <ion-content padding>
 
-    <ion-item>
+    <ion-item *ngFor="let item of messageArray">
         <ion-avatar item-start>
-          <img src="">
+          <button ion-button icon-only >
+            <ion-icon name="ios-notifications"></ion-icon>
+          </button>
         </ion-avatar>
-        <h2>Title</h2>
-        <p >Sub Title</p>
-        <p item-end>10/01/2019</p>
+        <h2>{{item.ms_title}}</h2>
+        <p >{{item.ms_mean}}</p>
+        <p item-end>{{item.ms_datetime}}</p>
         
         
       </ion-item>

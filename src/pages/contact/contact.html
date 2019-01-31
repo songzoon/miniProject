@@ -46,19 +46,19 @@
         <ion-item-sliding *ngFor="let item of contactArray" >
           <ion-item>
             <ion-avatar item-start>
-              <img src="{{item.imageUrl}}">
+              <img src="{{myIP}}/data/img/{{item.img}}">
             </ion-avatar>
-            <h2>{{item.name}}</h2>
-            <p>{{item.telephone}}</p>
+            <h2>{{item.Name}}</h2>
+            <p>{{item.Telephone}}</p>
           </ion-item>
           <ion-item-options side="left">
-            <button ion-button color="primary" (click)="sms(item.name,item.telephone)">
+            <button ion-button color="primary" (click)="sms(item.Name,item.Telephone)">
               <ion-icon name="text"></ion-icon>
               Text
             </button>
           </ion-item-options>
           <ion-item-options side="right">
-              <button ion-button color="secondary" (click)="call(item.name,item.telephone)">
+              <button ion-button color="secondary" (click)="call(item.Name,item.Telephone)">
                   <ion-icon name="call"></ion-icon>
                   Call
                 </button>

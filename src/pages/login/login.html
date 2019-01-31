@@ -8,43 +8,50 @@
 
   <ion-navbar>
     <ion-title>Login</ion-title>
+    
   </ion-navbar>
+
+  
 
 </ion-header>
 
 
 <ion-content padding >
 
+    <ion-row class="logo-row">
+        <ion-col></ion-col>
+        <ion-col width-67>
+          <img src="assets/imgs/lock.png" width="80%" height="80%">
+        </ion-col>
+        <ion-col></ion-col>
+    </ion-row>
+      
+
+
+    
     <ion-list>
-
-
-
+ 
         <ion-item>
-      
-          <ion-label>Username</ion-label>
-      
-          <ion-input type="text"></ion-input>
-      
+          <ion-label floating>Username</ion-label>
+          <ion-input type="text" [(ngModel)]="Username"></ion-input>
         </ion-item>
       
-      
-      
         <ion-item>
-      
-          <ion-label>Password</ion-label>
-      
-          <ion-input type="password"></ion-input>
-      
+          <ion-label floating>Password</ion-label>
+          <ion-input type="password" [(ngModel)]="Password"></ion-input>
         </ion-item>
       
       </ion-list>
       
       
+      <h1></h1>
+    <button ion-button block round (click)="signIn(Username, Password)">เข้าสู่ระบบ</button>
+      <h1></h1> 
+    <button ion-button block round color="secondary" (click)="openRegisterPage()">ลงทะเบียน</button>
+      <h1></h1>
+    <button ion-button block round color="light" (click)="openPageBack()">ย้อนกลับ</button>
+
+    
       
-      <div padding>
-      
-        <button block>Sign In</button>
-      
-      </div>
 
 </ion-content>

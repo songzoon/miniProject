@@ -1,27 +1,47 @@
 <ion-header >
   <ion-navbar >
-    <ion-title>Home </ion-title>
+
+    <ion-buttons >
+        <ion-title >Home</ion-title>
+ 
+        <img (click) = "openProfile()" src="assets/imgs/img_song.jpg" 
+        alt="" srcset="" width="10%" height="10%" >
+
+    </ion-buttons>
+
+    
+    <ion-buttons end >
+        <button ion-button icon-only (click) = "openMessagePage()" >
+          <ion-icon name="ios-contact" ></ion-icon> 
+          sign in
+        </button>   
+    </ion-buttons> 
 
   </ion-navbar>
 </ion-header>
 
 <ion-content padding >
-  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-    <ion-list>
-      <ion-item *ngFor="let item of items">
-        {{ item }}
-      </ion-item>
-    </ion-list>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
-<button ion-button block (click) = "nextPage()"></button>
+
+    <ion-slides pager >
+
+        <ion-slide style="background-color: rgb(230, 230, 230)">
+          <h2 >Slide 1</h2>
+          
+        </ion-slide>
+      
+        <ion-slide style="background-color: rgb(230, 235, 230)">
+          <h2>Slide 2</h2>
+        </ion-slide>
+      
+        <ion-slide style="background-color: rgb(230, 230, 230)">
+          <h2>Slide 3</h2>
+        </ion-slide>
+      
+      </ion-slides>
+
+
+  <button ion-button block (click) = "nextPage()"></button>
+
 
 
 </ion-content>

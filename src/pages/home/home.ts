@@ -7,6 +7,8 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+ 
+
   constructor(public navCtrl: NavController) {
 
   }
@@ -14,5 +16,15 @@ export class HomePage {
   nextPage(){
     this.navCtrl.push("TakePhotoPage");
   }
+
+  openMessagePage(){
+    this.navCtrl.push("LoginPage");
+  }
+
+  openProfile(){
+    this.navCtrl.push("LoginPage");
+  }
+
+  
 
 }

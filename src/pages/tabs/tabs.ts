@@ -5,18 +5,19 @@ import { Component } from '@angular/core';
 
 import { ContactPage } from '../contact/contact';
 import { HomePage } from '../home/home';
+import { NavController } from 'ionic-angular';
 
 @Component({
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
 
-  tab1Root = HomePage;
+  tab1Root = HomePage; 
   tab2Root = MessagePage;
   tab3Root = ContactPage;
   tab4Root = AboutMePage;
   
-  constructor() {
+  constructor(public navCtrl: NavController) {
 
   }
 }
